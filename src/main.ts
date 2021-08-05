@@ -3,5 +3,6 @@ import vuetify from "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import "./assets/scss/override.scss";
+import "./assets/scss/app.scss";
 
 createApp(App).use(router).use(vuetify).mount("#app");

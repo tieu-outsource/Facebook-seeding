@@ -6,4 +6,33 @@ header.v-app-bar {
 
 main.v-main {
     padding-left: 215px !important;
+    padding-top: 75px !important;
+    padding-right: 10px !important;
+    background-color: #F8F8F8;
+}
+
+.v-card {
+    border-radius: 7px;
+    padding: 20px 10px;
+
+    .v-card-header {
+        .v-card-actions {
+            justify-content: flex-end;
+            padding: 0;
+        }
+    }
+}
+
+.dataTables_wrapper {
+    .thead-dark {
+        th {
+            background: white !important;
+            color: black !important;
+            border-bottom: 1px solid #C4C4C4 !important;
+        }
+    }
+
+    * {
+        border: none !important;
+    }
 }

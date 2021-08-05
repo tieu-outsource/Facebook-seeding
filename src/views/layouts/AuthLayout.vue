@@ -1,5 +1,6 @@
 <template>
-  <h2>Login page</h2>
+  Auth layout
+  <router-view />
 </template>
 
 <script>

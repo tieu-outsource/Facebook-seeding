@@ -1,20 +1,13 @@
 <template>
   <v-navigation-drawer permanent class="sidebar">
     <v-list-item class="sidebar__header">
-      <v-img
-        :src="require('@/assets/logo.png')"
-        max-height="75"
-      />
+      <v-img :src="require('@/assets/logo.png')" max-height="75" />
     </v-list-item>
 
     <v-divider></v-divider>
 
     <v-list dense nav>
-      <v-list-item
-        v-for="item in items"
-        :key="item.title"
-        link
-      >
+      <v-list-item v-for="item in items" :key="item.title" link>
         <router-link :to="item.link" class="sidebar__item-container">
           <div class="sidebar__item">
             <v-icon>{{ item.icon }}</v-icon>
@@ -23,26 +16,26 @@
         </router-link>
       </v-list-item>
     </v-list>
-  </v-navigation-drawer> 
+  </v-navigation-drawer>
 </template>
 
 <script>
 export default {
   setup() {
     const items = [
-      { title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/' },
-      { title: 'Photos', icon: 'mdi-image', link: '/about' },
-      { title: 'About', icon: 'mdi-help-box', link: '/login' },
+      { title: "Dashboard", icon: "mdi-view-dashboard", link: "/" },
+      { title: "Accounts", icon: "mdi-image", link: "/accounts" },
+      { title: "About", icon: "mdi-help-box", link: "/login" },
     ];
     return { items };
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .sidebar {
   width: 200px !important;
-  background: linear-gradient(178.67deg, #147BD8 0%, #00A0FF 100%);
+  background: linear-gradient(178.67deg, #147bd8 0%, #00a0ff 100%);
   color: white;
 
   &__header {

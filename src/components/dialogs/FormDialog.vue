@@ -1,14 +1,17 @@
 <template>
   <v-dialog @update:modelValue="$emit('update:visible', $event)" :modelValue="visible">
     <v-card elevation="2" shaped tile class="dialog">
+
       <v-card-header class="dialog__header">
         <v-card-header-text class="dialog__header__text">
-          <v-card-title>Hello viet nam</v-card-title>
+          <v-card-title>{{ title }}</v-card-title>
         </v-card-header-text>
       </v-card-header>
+
       <div class="dialog__body">
-        hehe
+        <slot name="body"></slot>
       </div>
+
     </v-card>
   </v-dialog>
 </template>
@@ -19,7 +22,11 @@ export default {
     visible: {
       type: Boolean,
       default: false,
-    }
+    },
+    title: {
+      type: String,
+      default: 'Title',
+    },
   },
   setup(props) {
     console.log(props)
@@ -44,7 +51,9 @@ export default {
 
   &__body {
     background: white;
-    padding: 5px;
+    padding: 30px;
+    min-width: 500px;
+    min-height: 300px;
   }
 }
 </style>
